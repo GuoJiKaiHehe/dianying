@@ -25,7 +25,7 @@ $("#show").css({
 $("#logo").on("click",function(){
     localStorage.urls="";
     localStorage.id="";
-    window.location.href="../html/index.html";
+    window.location.href="index.html";
 })
 
 
