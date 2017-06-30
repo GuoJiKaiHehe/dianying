@@ -46,7 +46,7 @@ function getSource(url){
 
             $("#main>div").on("click",function(){
                 localStorage.moveId=$(this).children().eq(0).attr("data-id");
-                window.location.href="../information.html";
+                window.location.href="information.html";
             });
         },
         error:function (XMLHttpRequest, textStatus, errorThrown) {
