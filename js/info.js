@@ -192,15 +192,15 @@ function getLong(data){
 $(".bottom-main>li>a").on("click",function(){
     localStorage.title = $(this).html();
     localStorage.urls=$(this).attr("data-url");
-    window.location.href="../html/index.html";
+    window.location.href="index.html";
 });
 
 $("#shortMore>a").on("click",function(){
-    window.location.href="../html/short.html";
+    window.location.href="short.html";
 })
 
 $("#longMore>a").on("click",function(){
-    window.location.href="../html/long.html";
+    window.location.href="long.html";
 })
 
 
