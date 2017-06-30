@@ -33,7 +33,7 @@ $("#logo").on("click",function(){
 $("#search").on("click",function(){
     if($("#search").prev().val()){
         localStorage.search=$("#search").prev().val();
-        window.location.href="../html/search.html";
+        window.location.href="search.html";
     }else{
         alert("搜索不能为空");
     }
