@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Wkdqt6LHbuszoYs4oLYPxPSu"></script>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/seat.css">
+    <title>订票详情</title>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand main-color" href="#" id="logo">酷爱电影</a>
+                <div class="navbar-right navbar-brand x" id="cinemaName">
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid row">
+            <div class="col-xs-8">
+                <h4 id="movieName"></h4>
+                <p><span id="showTime"></span><span class="red">价格<span id="price"></span>元</span></p>
+            </div>
+            <div class="col-xs-3 ChangeP">
+                <a href="javascript:void(0)" class="text-right x floatRight" id="put">点击订票</a>
+            </div>
+        </div>
+        <div class="container-fluid fix">
+            <div class="cl-md-4 cl-xs-4 fix-child" ><span class="white">11</span><span>未选</span></div>
+            <div class="cl-md-4 cl-xs-4 fix-child" ><span class="green">11</span><span>已选</span></div>
+            <div class="cl-md-4 cl-xs-4 fix-child" ><span class="rose">11</span><span>有人</span></div>
+        </div>
+        <div class="container-fluid text-center" id="center">
+        </div>
+    </nav>
+    <!--      顶部导航end        -->
+    <main class="fixed main">
+        <table>
+            <thead>
+                <td class="text-center thead">屏幕中央</td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                </tr>
+                <tr>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                </tr>
+                <tr>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                </tr>
+                <tr>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                </tr>
+                <tr>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                </tr>
+                <tr>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                </tr>
+                <tr>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                </tr>
+                <tr>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                </tr>
+                <tr>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                </tr>
+                <tr>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                </tr>
+                <tr>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                </tr>
+                <tr>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                </tr>
+                <tr>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                </tr>
+                <tr>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                </tr>
+                <tr>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                </tr>
+                <tr>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                    <td class="display"></td>
+                </tr>
+            </tbody>
+          
+        </table>
+    </main>
+    <!--      底部导航start       -->
+
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid row">
+                <div class="btn-group col-xs-6 dropup bottom-kind">
+                    <button type="button" class="btn btn-default dropdown-toggle navbar-brand bottom-kind-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        榜单 <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu bottom-main">
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/in_theaters">正在热映</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/coming_soon">即将上映</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/top250">Top250</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/weekly">口碑榜</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/us_box">北美票房榜</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/new_movies">新片榜</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group col-xs-6 dropup bottom-kind">
+                    <button type="button" class="btn btn-default dropdown-toggle navbar-brand bottom-kind-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        分类 <span class="caret"></span>
+                    </button>
+                     <ul class="dropdown-menu bottom-main">
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E5%8A%A8%E4%BD%9C">动作</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E5%96%9C%E5%89%A7">喜剧</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E7%88%B1%E6%83%85">爱情</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E6%82%AC%E7%96%91">悬疑</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E6%81%90%E6%80%96" >恐怖</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E7%A7%91%E5%B9%BB">科幻</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E6%B2%BB%E6%84%88">治愈</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E5%8A%A8%E7%94%BB">动画</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E7%BB%8F%E5%85%B8">经典</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E8%B1%86%E7%93%A3%E9%AB%98%E5%88%86">豆瓣高分</a></li>
+                    </ul>
+                </div>
+        </div>
+    </nav>
+    <!--      底部导航end       -->
+
+</body>
+<script src="../js/common.js"></script>
+<script src="../js/seat.js"></script>
+</html>

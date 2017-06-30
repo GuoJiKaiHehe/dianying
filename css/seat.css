@@ -1,0 +1,58 @@
+td {
+  display: inline-block;
+  width: 1rem;
+  margin: 2px;
+  height: 1rem;
+  background-color: red; }
+
+.fixed {
+  min-width: 1000px;
+  max-width: 1000px; }
+
+.ChangeP {
+  margin-top: 3%; }
+
+@media screen and (max-width: 400px) {
+  .ChangeP {
+    margin-top: 7%; } }
+table {
+  margin-top: 12rem;
+  margin-left: auto;
+  margin-right: auto; }
+
+#center {
+  background-color: white;
+  border: none; }
+
+.fix {
+  display: flex; }
+
+.fix-child {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1; }
+
+.white {
+  border: 1px solid gray;
+  background: white;
+  color: white; }
+
+.rose {
+  border: 1px solid gray;
+  background: red;
+  color: red; }
+
+.green {
+  border: 1px solid gray;
+  background: greenyellow;
+  color: greenyellow; }
+
+.display {
+  display: none; }
+
+.thead {
+  display: block;
+  width: 100%;
+  background: white; }
+
+/*# sourceMappingURL=seat.css.map */

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Wkdqt6LHbuszoYs4oLYPxPSu"></script>
+    <link rel="stylesheet" href="css/common.css">
+    <title>短评详情</title>
+</head>
+<body>
+    <!--      顶部导航start        -->
+    <div id="show">
+        <img src="img/loading.gif" alt="loading">
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand main-color" href="#" id="logo">酷爱电影</a>
+                <div class="navbar-brand local">所在地:<a href="javascript:void(0)" id="cityName">北京</a></div>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="navbar-form navbar-right relatives">
+                    <input type="text" class="form-control" placeholder="搜索" />
+                    <span class="glyphicon glyphicon-search" class="form-control" id="search"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--      顶部导航end        -->
+    <main class="navbar-default main">
+        <div class="container-fluid marginTop padding">
+            <h1 id="title" class="row">
+                <div class="col-xs-10">
+                    <span id="tit"></span>
+                    <small class="sml-title"><span id="average"></span>分</small>
+                    <h2><small>全部短评(<span id="total"></span>)</small></h2>
+                </div>
+                <img  class="img-responsive widthAll col-xs-2" alt="Responsive image" id="images" >
+            </h1>
+            <h2 id="more" class="text-center">加载更多</h2>
+        </div>
+    </main>
+    <!--      底部导航start       -->
+
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid row">
+                <div class="btn-group col-xs-6 dropup bottom-kind">
+                    <button type="button" class="btn btn-default dropdown-toggle navbar-brand bottom-kind-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        榜单 <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu bottom-main">
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/in_theaters">正在热映</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/coming_soon">即将上映</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/top250">Top250</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/weekly">口碑榜</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/us_box">北美票房榜</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/new_movies">新片榜</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group col-xs-6 dropup bottom-kind">
+                    <button type="button" class="btn btn-default dropdown-toggle navbar-brand bottom-kind-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        分类 <span class="caret"></span>
+                    </button>
+                     <ul class="dropdown-menu bottom-main">
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E5%8A%A8%E4%BD%9C">动作</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E5%96%9C%E5%89%A7">喜剧</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E7%88%B1%E6%83%85">爱情</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E6%82%AC%E7%96%91">悬疑</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E6%81%90%E6%80%96" >恐怖</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E7%A7%91%E5%B9%BB">科幻</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E6%B2%BB%E6%84%88">治愈</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E5%8A%A8%E7%94%BB">动画</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E7%BB%8F%E5%85%B8">经典</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E8%B1%86%E7%93%A3%E9%AB%98%E5%88%86">豆瓣高分</a></li>
+                    </ul>
+                </div>
+        </div>
+    </nav>
+    <!--      底部导航end       -->
+
+    <template id="short">
+        <div class="media borderSm">
+            <div class="media-left">
+                <a href="#">
+                <img class="media-object"  alt="...">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading"><span class="name"></span>&nbsp;&nbsp;&nbsp;<small>评分：<span class="rating"></span>分</small></h4>
+                <p class="created_at"></p>
+                <p class="content"></p>
+                <p><span class="glyphicon glyphicon-thumbs-up"></span><span class="useful_count"></span></p>
+            </div>
+        </div>
+    </template>
+
+</body>
+<script src="js/common.js"></script>
+<script src="js/short.js"></script>
+</html>

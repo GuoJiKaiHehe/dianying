@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Wkdqt6LHbuszoYs4oLYPxPSu"></script>
+    <link rel="stylesheet" href="css/common.css">
+    <title>影人详情</title>
+</head>
+<body>
+    <!--      顶部导航start        -->
+    <div id="show">
+        <img src="img/loading.gif" alt="loading">
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand main-color" href="#" id="logo">酷爱电影</a>
+                <div class="navbar-brand local">所在地:<a href="javascript:void(0)" id="cityName">北京</a></div>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="navbar-form navbar-right relatives">
+                    <input type="text" class="form-control" placeholder="搜索" />
+                    <span class="glyphicon glyphicon-search" class="form-control" id="search"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--      顶部导航end        -->
+    <main class="navbar-default main">
+        <div class="container-fluid marginTop padding">
+            <h1 id="name"></h1>
+            <div class="row noMargin">
+                <div class="col-md-2 col-xs-3">
+                    <img  class="img-responsive widthAll" alt="Responsive image" id="avatars"  />
+                </div>
+                <div class="col-md-9 col-xs-8 sml-title">
+                    <h4>性别:&nbsp;<span class="blue" id="gender"></span></h4>
+                    <h4>星座:&nbsp;<span class="blue" id="constellation"></span></h4>
+                    <h4>出生日期:&nbsp;<span class="blue" id="birthday"></span></h4>
+                    <h4>出生地:&nbsp;<span class="blue" id="born_place"></span></h4>
+                    <h4>职业:&nbsp;<span class="blue" id="professions"></span></h4>
+                    <h4>更多外文名:&nbsp;<span class="blue" id="aka"></span></h4>
+                    <h4>更多中文名:&nbsp;<span class="blue" id="aka_en"></span></h4>
+                </div>
+            </div>
+            <div class="row marginS">
+                <h1>
+                    <small>影人简介&nbsp;&nbsp;&nbsp;&nbsp;  • • • •</small>
+                    <a class="floatRight Xsmall orange" role="button" data-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+                        展开
+                    </a>
+                </h1>
+                <div class="collapse" id="collapseExample1">
+                    <div class="well">
+                         <h5 id="summary">
+                            "伊利亚·乔丹·伍德(Elijah Jordan Wood)，1981年1月28日出生于美国爱荷华州的锡达拉皮兹，父亲沃伦  伊利亚·伍德·伍德，母亲黛比·伍德。他在家中排行老二，上边有一个哥哥扎克，下面有一个妹妹汉纳·伍德。年幼时候，表现欲极强的伊利亚就表现出取悦别人的才能，母亲决定带他到洛杉矶，参加一年一度的国际模特人材协会大会，寻找发展机会。很快，他在好莱坞令人眼花缭乱的表演世界找到了一份工作。不久，他开始涉足商业表演，在电视表演界得到一些小的角色。1990年，他参加了影片《适者生存》(Avalon)的拍摄，这是他第一次扮演主角，从此揭开了他表演生涯的序幕。此后，他一口气参演了《温馨赤子情》(Paradise)，《海阔天空》(Radio Flyer)和《今生有约》(Forever Young)等影片。
+                            1993年，和麦考利·卡尔金共同主演过《危险小天使》(The Good Son)之后，伊利亚又参加了影片《浪子保镖》(North)的拍摄。虽然《浪子保镖》的票房收入十分惨淡，但伊影片中的伊利亚·伍德(8张)利亚的表现却受到人们的称赞，成为该片惟一一个亮点。此后2年间，他在演艺方面表现平平。1996年，伊利亚参加了由旧电视节目  伊利亚·伍德翻拍的影片《飞宝》(Flipper)，立即重新获得观众的认可。之后，他先后参加了无数影片的拍摄，增加了自己在好莱坞电影界的影响力。这时，有不少电影评论家怀疑，他那种博得观众喜欢的孩子气的表演才华是否会重蹈很多儿童演员的覆辙，逐渐江郎才尽，但伊利亚用事实证明，这种表演才华只会使他变得更加有力。
+                            1998年，他先后出演《慧星撞地球(又译深度撞击)》(Deep Impact)和《老师不是人》(The Faculty)，赢得观众广泛支持。1999年，伊利亚参加了3部影片的拍摄：《记忆的旅人》(The Bumblebee Flies Anyway)，《纵横黑白道》(Black and White)和《傻瓜一族》(Chain of Fools)，但这几部影片都从来没有在更为大的范围内发行。接着，伊利亚参加了由J·R·R·Tolkien原著改编的《魔戒三部曲》的拍摄，这三部影片被称为电影史上最大的一项工程。"
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row marginS">
+                <h1>
+                    <small>美照欣赏&nbsp;&nbsp;&nbsp;&nbsp;  • • • •</small>
+                    <a class="floatRight Xsmall orange" role="button" data-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+                        展开
+                    </a>
+                </h1>
+                <div class="collapse" id="collapseExample2">
+                    <div class="well">
+                        <div class="row">
+                            <!--<div class="col-md-2 col-xs-4">
+                                <img  class="img-responsive widthAll photos" alt="Responsive image" src="http://img3.doubanio.com/view/photo/photo/public/p912171586.jpg"/>
+                            </div>
+                            <div class="col-md-2 col-xs-4">
+                                <img  class="img-responsive widthAll photos" alt="Responsive image" 
+                                src="http://img3.doubanio.com/view/photo/photo/public/p912171586.jpg">
+                            </div>
+                            <div class="col-md-2  col-xs-4">
+                                <img  class="img-responsive widthAll photos" alt="Responsive image" 
+                                src="http://img3.doubanio.com/view/photo/photo/public/p912171586.jpg">
+                            </div>
+                            <div class="col-md-2  col-xs-4">
+                                <img  class="img-responsive widthAll photos" alt="Responsive image" 
+                                src="http://img3.doubanio.com/view/photo/photo/public/p912171586.jpg">
+                            </div>
+                            <div class="col-md-2  col-xs-4">
+                                <img  class="img-responsive widthAll photos" alt="Responsive image" 
+                                src="http://img3.doubanio.com/view/photo/photo/public/p912171586.jpg">
+                            </div>
+                            <div class="col-md-2  col-xs-4">
+                                <img  class="img-responsive widthAll photos" alt="Responsive image" 
+                                src="http://img3.doubanio.com/view/photo/photo/public/p912171586.jpg">
+                            </div>-->
+                        </div>
+                        <h2 class="text-center" id="photoMore"><a href="javascript:void(0);">更多</a></h2>
+                    </div>
+                </div>
+            </div>
+              <div class="row marginS">
+                <h1>
+                    <small>作品赏析&nbsp;&nbsp;&nbsp;&nbsp;  • • • •</small>
+                    <a class="floatRight Xsmall orange" role="button" data-toggle="collapse" href="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
+                        展开
+                    </a>
+                </h1>
+                <div class="collapse" id="collapseExample3">
+                    <div class="well">
+                        
+                        <!--<div class="row marginS">
+                            <a href="javascript:void(0);">
+                                <div class="col-md-2 col-xs-2">
+                                    <img  class="img-responsive widthAll" alt="Responsive image" id="avatars" src="http://img7.doubanio.com/view/movie_poster_cover/spst/public/p2434272900.jpg" />
+                                </div>
+                                <div class="col-md-9 col-xs-9 sml-title">
+                                    <h5>标题:&nbsp;<span class="blue" class="title">无处为家</span></h5>
+                                    <h5>剧中职责:&nbsp;<span class="blue roles">"演员"</span></h5>
+                                    <h5>年份:&nbsp;<span class="blue" class="year">2017</span></h5>
+                                    <h5>作品种类:&nbsp;<span class="blue genres">"美国,爱荷华州,锡达拉皮兹"</span></h5>
+                                    <h5>评分:&nbsp;<span class="blue" class="rating">演员、制片</span></h5>
+                                </div>
+                            </a>
+                        </div>-->
+                         <h2 class="text-center" id="worksMore"><a href="#">更多</a></h2>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </main>
+    <!--      底部导航start       -->
+
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid row">
+                <div class="btn-group col-xs-6 dropup bottom-kind">
+                    <button type="button" class="btn btn-default dropdown-toggle navbar-brand bottom-kind-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        榜单 <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu bottom-main">
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/in_theaters">正在热映</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/coming_soon">即将上映</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/top250">Top250</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/weekly">口碑榜</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/us_box">北美票房榜</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/new_movies">新片榜</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group col-xs-6 dropup bottom-kind">
+                    <button type="button" class="btn btn-default dropdown-toggle navbar-brand bottom-kind-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        分类 <span class="caret"></span>
+                    </button>
+                     <ul class="dropdown-menu bottom-main">
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E5%8A%A8%E4%BD%9C">动作</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E5%96%9C%E5%89%A7">喜剧</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E7%88%B1%E6%83%85">爱情</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E6%82%AC%E7%96%91">悬疑</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E6%81%90%E6%80%96" >恐怖</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E7%A7%91%E5%B9%BB">科幻</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E6%B2%BB%E6%84%88">治愈</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E5%8A%A8%E7%94%BB">动画</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E7%BB%8F%E5%85%B8">经典</a></li>
+                        <li><a href="#" data-url="https://api.douban.com/v2/movie/search?tag=%E8%B1%86%E7%93%A3%E9%AB%98%E5%88%86">豆瓣高分</a></li>
+                    </ul>
+                </div>
+        </div>
+    </nav>
+    <!--      底部导航end       -->
+
+    <template id="photo">
+        <div class="col-md-2 col-xs-4">
+            <img  class="img-responsive widthAll photos" alt="Responsive image" />
+        </div>
+    </template>
+
+    <template id="works">
+        <div class="row marginS">
+            <a href="javascript:void(0);" class="mov">
+                <div class="col-md-2 col-xs-2">
+                    <img  class="img-responsive widthAll avatars" alt="Responsive image"   />
+                </div>
+                <div class="col-md-9 col-xs-9 sml-title">
+                    <h5>标题:&nbsp;<span class="blue title"></span></h5>
+                    <h5>剧中职责:&nbsp;<span class="blue roles"></span></h5>
+                    <h5>年份:&nbsp;<span class="blue year" ></span></h5>
+                    <h5>作品种类:&nbsp;<span class="blue genres"></span></h5>
+                    <h5>评分:&nbsp;<span class="blue rating"></span></h5>
+                </div>
+            </a>
+        </div>
+    </template>
+  
+</body>
+<script src="js/common.js"></script>
+<script src="js/action.js"></script>
+</html>
